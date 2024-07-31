@@ -1,3 +1,1 @@
-Hello-user = Привет, { $username }.
-Cancel = Отмена
-Back = 🔙 Назад
+greeting = Привет, { $username }.

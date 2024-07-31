@@ -6,6 +6,8 @@ transfer throw Dispatcher->Middlewares->Handlers.
 
 from typing import TypedDict
 
+from aiogram import Bot
+
 
 class TransferData(TypedDict):
     """Common transfer data."""

@@ -1,19 +1,14 @@
 """This file represents a start logic."""
 
-
 from aiogram import Router, types
 from aiogram.filters import CommandStart, Command
 from aiogram.types import ReplyKeyboardRemove
-from aiogram_dialog import DialogManager, StartMode
+from fluentogram import TranslatorRunner
 
-from src.bot.structures.FSM.dialog_fsm import StartSG, AssistantSG
-
-commands_handler_router = Router(name='start')
+commands_handler_router = Router(name='commands')
 
 
 @commands_handler_router.message(CommandStart())
-async def start_handler(message: types.Message, dialog_manager: DialogManager):
+async def start_handler(message: types.Message, i18n: TranslatorRunner):  # TODO: add fluentogram to transfer data
     """Start command handler."""
-    await message.answer('💡', reply_markup=ReplyKeyboardRemove())
-    await dialog_manager.start(StartSG.greeting, mode=StartMode.NORMAL)
-
+    await message.answer(i18n.greeting(), reply_markup=ReplyKeyboardRemove())
