@@ -5,4 +5,9 @@ services:
     branch: main
     deploy_on_push: true
     repo: tempalg1n/dify-telegram-bot
+  envs:
+    - key: BOT_TOKEN
+      scope: RUN_TIME
+    - key: DIFY_API_KEY
+      scope: RUN_TIME
   name: dify-telegram-bot

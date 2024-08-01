@@ -1,13 +1,6 @@
-import asyncio
-import string
-import random
-
 from aiogram import Bot
 from aiogram.client.default import DefaultBotProperties
-from aiogram.enums import ParseMode
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.storage.base import StorageKey, BaseStorage
-from aiogram.fsm.storage.memory import MemoryStorage
 from sulguk import SULGUK_PARSE_MODE, AiogramSulgukMiddleware
 
 from src.configuration import conf
@@ -20,7 +13,6 @@ async def get_answer(
         wait_message_id: int,
         state: FSMContext,
         conversation_id: str = None,
-        # storage: BaseStorage = MemoryStorage()
 ):
     bot = Bot(conf.bot.token, default=DefaultBotProperties(parse_mode=SULGUK_PARSE_MODE))
     bot.session.middleware(AiogramSulgukMiddleware())
