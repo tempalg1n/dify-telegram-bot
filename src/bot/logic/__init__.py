@@ -4,7 +4,7 @@ from src.bot.logic.handlers.commands import commands_handler_router
 from src.bot.logic.handlers.conversation import conversation_handler_router
 
 routers = (
-    conversation_handler_router,
     commands_handler_router,
+    conversation_handler_router,
     start_dialog,
 )
