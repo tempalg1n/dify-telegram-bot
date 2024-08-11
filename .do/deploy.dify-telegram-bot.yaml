@@ -1,8 +1,0 @@
-spec:
-  name: dify-telegram-bot
-  services:
-  - environment_slug: python
-    git:
-      branch: main
-      repo_clone_url: https://github.com/tempalg1n/dify-telegram-bot.git
-    name: dify-telegram-bot
