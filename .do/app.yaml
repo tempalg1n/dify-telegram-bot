@@ -1,4 +1,4 @@
-name: DifyGram
+name: difygram
 services:
 - environment_slug: python
   github:
@@ -10,4 +10,4 @@ services:
       scope: RUN_TIME
     - key: DIFY_API_KEY
       scope: RUN_TIME
-  name: DifyGram
+  name: difygram

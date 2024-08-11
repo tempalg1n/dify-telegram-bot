@@ -1,8 +1,8 @@
 spec:
-  name: DifyGram
+  name: difygram
   services:
   - environment_slug: python
     git:
       branch: main
       repo_clone_url: https://github.com/GeorgeStrakhov/DifyGram.git
-    name: DifyGram
+    name: difygram
