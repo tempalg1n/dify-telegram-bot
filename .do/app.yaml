@@ -11,3 +11,4 @@ services:
     - key: DIFY_API_KEY
       scope: RUN_TIME
   name: difygram
+  run_command: python -m src.bot
