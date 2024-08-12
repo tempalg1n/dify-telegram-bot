@@ -10,7 +10,6 @@ from src.dify.client import Dify
 async def get_answer(
         user_input: str,
         user_id: int,
-        wait_message_id: int,
         state: FSMContext,
         conversation_id: str = None,
 ):
@@ -23,7 +22,6 @@ async def get_answer(
     else:
         answer = f'An error has occurred during conversation. Try again!'
     async with bot:
-        await bot.delete_message(user_id, wait_message_id)
         await bot.send_message(user_id, answer)
         await state.set_data(
             {"conversation_id": conversation_id if conversation_id else response[1]['conversation_id']}
